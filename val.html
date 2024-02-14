@@ -3,26 +3,24 @@
 
 <head>
     <style>
-        html {
-            height: 100%;
+        html{
+            width:100%;
         }
-
         body {
             background: pink;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 100%;
+        }
+        .container {
+            position: relative; /* Rodzic */
             overflow: hidden;
+            height: 2700px;
         }
 
         .heart {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             position: absolute;
-            left: 200px;
-            top: 200px;
+            left: -200px;
+            top: -200px;
         }
 
         h1,
@@ -31,6 +29,12 @@
             color: white;
             position: relative;
             font-family: 'Courier New', monospace;
+        }
+        h3 {
+            font-size: 40px;
+        }
+        h1 {
+            font-size: 60px;
         }
 
         .panel {
@@ -41,6 +45,10 @@
             backdrop-filter: blur(10.5px);
             -webkit-backdrop-filter: blur(10.5px);
             border-radius: 20px;
+            position: absolute;
+            top: 40%;
+            left:26%;
+            text-align: center;
         }
     </style>
     <script src="./val.js"></script>
@@ -51,7 +59,10 @@
     <div class="panel">
         <h3>Hej Kasiu</h3>
         <h3>Zostaniesz dziś moją</h3>
-        <h1>Walentykną?</h1>
+        <h1>Walentynką?</h1>
+    </div>
+    <div class="container">
+        
     </div>
 </body>
 
