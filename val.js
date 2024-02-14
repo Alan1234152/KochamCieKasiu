@@ -3,19 +3,20 @@ const pinks = ["#ff748c", "#ff8da1", "#ffa7b6", "#FF0000", "#FFB6C1", "#FF69B4",
 
 class Heart {
     constructor(x, y) {
+        var container = document.querySelector('.container');
         this.x = x;
         this.y = y;
         this.theta = Math.random() * Math.PI * 2;
         const heartEl = document.createElement("img");
         heartEl.classList.add("heart");
         heartEl.setAttribute('src', "./image/Untitled-2.png")
-        document.body.append(heartEl);
+        container.appendChild(heartEl);
 
         this.el = heartEl;
 
         setTimeout(() => {
             this.el.remove();
-        }, 10000)
+        }, 15000)
     }
 
     update() {
@@ -28,10 +29,10 @@ class Heart {
 }
 
 setInterval(() => {
-    const heart = new Heart(Math.random() * window.innerWidth, -100);
+    const heart = new Heart(Math.random() * window.innerHeight, -100);
     hearts.push(heart);
 }, 200);
 
 setInterval(() => {
     hearts.forEach((heart) => heart.update());
-}, 10);
+}, 1);
