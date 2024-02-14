@@ -15,7 +15,7 @@ class Heart {
 
         setTimeout(() => {
             this.el.remove();
-        }, 15000)
+        }, 10000)
     }
 
     update() {
